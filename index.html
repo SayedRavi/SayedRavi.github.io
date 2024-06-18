@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Expanding Cards</title>
+</head>
+<body>
+    
+    <div class="container" style="display: flex;
+  justify-content: center; margin: 200px; font-size: 100px;">
+        <div id="time"></div>
+    </div>
+<script src="js/script.js"></script>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    // console.log(moment().format('h:mm:ss'));
+    function updateClock(){
+    let momentTime = moment().format('h:mm:ss a');
+    console.log(momentTime);
+    $('#time').text(momentTime);
+    }
+    setInterval(updateClock, 1000);
+    
+</script>
+</body>
+</html>
